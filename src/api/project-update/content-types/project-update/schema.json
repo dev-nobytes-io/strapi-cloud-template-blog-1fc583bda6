@@ -32,7 +32,7 @@
       "target": "api::project.project",
       "inversedBy": "updates"
     },
-    "publishedAt": {
+    "date": {
       "type": "date"
     }
   }
