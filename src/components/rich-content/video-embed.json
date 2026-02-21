@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_rich_content_video_embeds",
+  "info": {
+    "name": "Video Embed",
+    "displayName": "Video Embed",
+    "icon": "play-circle",
+    "description": "Embeds a video via URL"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    }
+  }
+}

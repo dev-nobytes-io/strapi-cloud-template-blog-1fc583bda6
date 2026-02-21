@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_rich_content_callouts",
+  "info": {
+    "name": "Callout",
+    "displayName": "Callout",
+    "icon": "exclamation-circle",
+    "description": "Callout box with info, warning, or tip styling"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["info", "warning", "tip"],
+      "default": "info"
+    }
+  }
+}

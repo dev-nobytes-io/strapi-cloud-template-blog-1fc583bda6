@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lead_enquiries",
+  "info": {
+    "singularName": "lead-enquiry",
+    "pluralName": "lead-enquiries",
+    "displayName": "Lead Enquiry",
+    "description": "Qualified business lead pipeline"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "company": {
+      "type": "string"
+    },
+    "budget": {
+      "type": "enumeration",
+      "enum": ["under5k", "5to20k", "20to50k", "over50k"]
+    },
+    "timeline": {
+      "type": "enumeration",
+      "enum": ["asap", "1to3months", "3to6months", "6plusmonths", "flexible"]
+    },
+    "projectType": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service.service"
+    },
+    "details": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["new", "contacted", "qualified", "closed-won", "closed-lost"],
+      "default": "new"
+    },
+    "notes": {
+      "type": "text"
+    }
+  }
+}

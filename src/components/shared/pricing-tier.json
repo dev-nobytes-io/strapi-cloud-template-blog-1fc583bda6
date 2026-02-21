@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_pricing_tiers",
+  "info": {
+    "name": "Pricing Tier",
+    "displayName": "Pricing Tier",
+    "icon": "money-bill",
+    "description": "Pricing tier with name, amount, interval and description"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "interval": {
+      "type": "enumeration",
+      "enum": ["one-time", "monthly", "yearly"]
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

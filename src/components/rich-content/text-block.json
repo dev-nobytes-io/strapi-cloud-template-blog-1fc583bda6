@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_rich_content_text_blocks",
+  "info": {
+    "name": "Text Block",
+    "displayName": "Text Block",
+    "icon": "align-justify",
+    "description": "Rich text content block"
+  },
+  "options": {},
+  "attributes": {
+    "body": {
+      "type": "richtext"
+    }
+  }
+}
