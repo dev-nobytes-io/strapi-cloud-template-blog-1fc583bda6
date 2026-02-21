@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "labs",
+  "info": {
+    "singularName": "lab",
+    "pluralName": "labs",
+    "displayName": "Lab",
+    "description": "Hands-on security and technical labs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "summary": {
+      "type": "text"
+    },
+    "difficulty": {
+      "type": "enumeration",
+      "enum": ["Easy", "Medium", "Hard", "Insane"]
+    },
+    "body": {
+      "type": "dynamiczone",
+      "components": [
+        "rich-content.text-block",
+        "rich-content.code-block",
+        "rich-content.image-block",
+        "rich-content.video-embed",
+        "rich-content.callout"
+      ]
+    },
+    "files": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images", "files", "videos"]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag"
+    },
+    "membersOnly": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

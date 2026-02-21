@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_social_links",
+  "info": {
+    "name": "Social Link",
+    "displayName": "Social Link",
+    "icon": "link",
+    "description": "A social platform name and URL pair"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

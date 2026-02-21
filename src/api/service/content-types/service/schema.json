@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service",
+    "description": "Professional services offered"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "body": {
+      "type": "dynamiczone",
+      "components": [
+        "rich-content.text-block",
+        "rich-content.code-block",
+        "rich-content.image-block",
+        "rich-content.video-embed",
+        "rich-content.callout"
+      ]
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "price": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.pricing-tier"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "ctaText": {
+      "type": "string"
+    },
+    "ctaURL": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": ["consulting", "audit", "training", "development"]
+    }
+  }
+}

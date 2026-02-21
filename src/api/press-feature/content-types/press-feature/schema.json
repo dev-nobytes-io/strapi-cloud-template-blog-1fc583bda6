@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "press_features",
+  "info": {
+    "singularName": "press-feature",
+    "pluralName": "press-features",
+    "displayName": "Press Feature",
+    "description": "Press coverage, podcast appearances and media features"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "publication": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "url": {
+      "type": "string"
+    },
+    "excerpt": {
+      "type": "text"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["article", "podcast", "interview", "talk"]
+    }
+  }
+}

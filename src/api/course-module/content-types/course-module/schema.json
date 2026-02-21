@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "course_modules",
+  "info": {
+    "singularName": "course-module",
+    "pluralName": "course-modules",
+    "displayName": "Course Module",
+    "description": "A module within a course containing ordered lessons"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "lessons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lesson.lesson",
+      "mappedBy": "module"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "modules"
+    }
+  }
+}

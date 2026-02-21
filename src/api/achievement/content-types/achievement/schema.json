@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "achievements",
+  "info": {
+    "singularName": "achievement",
+    "pluralName": "achievements",
+    "displayName": "Achievement",
+    "description": "Certifications, awards, and professional milestones"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["certification", "award", "community", "milestone"]
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "dateEarned": {
+      "type": "date"
+    },
+    "expiryDate": {
+      "type": "date"
+    },
+    "credentialURL": {
+      "type": "string"
+    },
+    "badge": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

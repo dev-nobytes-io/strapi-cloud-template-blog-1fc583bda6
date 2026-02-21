@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "navigations",
+  "info": {
+    "singularName": "navigation",
+    "pluralName": "navigations",
+    "displayName": "Navigation",
+    "description": "Main menu and footer navigation links"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainMenu": {
+      "type": "json"
+    },
+    "footerLinks": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "writeups",
+  "info": {
+    "singularName": "writeup",
+    "pluralName": "writeups",
+    "displayName": "Writeup",
+    "description": "CTF and cyber lab writeups"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "platform": {
+      "type": "enumeration",
+      "enum": ["HackTheBox", "TryHackMe", "VulnHub", "Other"]
+    },
+    "difficulty": {
+      "type": "enumeration",
+      "enum": ["Easy", "Medium", "Hard", "Insane"]
+    },
+    "category": {
+      "type": "string"
+    },
+    "body": {
+      "type": "dynamiczone",
+      "components": [
+        "rich-content.text-block",
+        "rich-content.code-block",
+        "rich-content.image-block",
+        "rich-content.video-embed",
+        "rich-content.callout"
+      ]
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag"
+    },
+    "spoilerWarning": {
+      "type": "boolean",
+      "default": false
+    },
+    "membersOnly": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

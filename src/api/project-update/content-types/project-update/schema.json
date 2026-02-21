@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_updates",
+  "info": {
+    "singularName": "project-update",
+    "pluralName": "project-updates",
+    "displayName": "Project Update",
+    "description": "Progress updates for projects"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "dynamiczone",
+      "components": [
+        "rich-content.text-block",
+        "rich-content.code-block",
+        "rich-content.image-block",
+        "rich-content.video-embed",
+        "rich-content.callout"
+      ]
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "updates"
+    },
+    "publishedAt": {
+      "type": "date"
+    }
+  }
+}
