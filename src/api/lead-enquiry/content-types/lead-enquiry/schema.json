@@ -25,11 +25,11 @@
     },
     "budget": {
       "type": "enumeration",
-      "enum": ["under5k", "5to20k", "20to50k", "over50k"]
+      "enum": ["under5k", "from5to20k", "from20to50k", "over50k"]
     },
     "timeline": {
       "type": "enumeration",
-      "enum": ["asap", "1to3months", "3to6months", "6plusmonths", "flexible"]
+      "enum": ["asap", "oneToThreeMonths", "threeToSixMonths", "sixPlusMonths", "flexible"]
     },
     "projectType": {
       "type": "relation",
